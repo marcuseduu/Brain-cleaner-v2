@@ -1,0 +1,13 @@
+
+{% include 'header.html' %}
+<h1>Histórico de Concluídos</h1>
+{% if historico %}
+<ul>
+    {% for item in historico %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Sem itens concluídos.</p>
+{% endif %}
+{% include 'footer.html' %}

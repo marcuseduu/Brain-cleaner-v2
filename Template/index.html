@@ -1,0 +1,13 @@
+
+{% include 'header.html' %}
+<h1>Brain Cleaner</h1>
+<form method="post">
+    <input type="text" name="thought" placeholder="Digite seu pensamento..." style="width:300px;">
+    <input type="submit" value="Adicionar">
+</form>
+<hr>
+<h3>Pensamentos</h3>
+{% for item in thoughts %}
+    <div>{{ item.text }} {% if item.date %} - Data: {{ item.date }}{% endif %}</div>
+{% endfor %}
+{% include 'footer.html' %}
